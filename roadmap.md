@@ -1,11 +1,3 @@
-# Roadmap
-
-- [x] Import the uploaded DigiBasera source without visual redesign.
-- [x] Preserve supplied pages, media, fonts, content, metadata, and interactions.
-- [x] Verify home and services views on mobile and desktop.
-- [x] Verify a service detail URL responds successfully.
-- [x] Replace the home hero video with a brand-relevant digital agency scene.
-- [x] Replace the About hero media with the supplied-reference visual in the site palette and animate it.
-- [x] Replace only the Career hero image with an animated career-growth journey visual.
-- [x] Replace only the Home hero background with a distinctly different premium light marketing-tech video.
-- [x] Use the existing Career hero image as its background with a subtle continuous animation.
+- [ ] Home hero background video को सभी browsers/viewports पर साफ़ दिखाना
+- [ ] Careers hero heading और paragraph को स्पष्ट, बिना overlap दिखाना
+- [ ] Desktop और mobile preview में दोनों fixes verify करना

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
 interface HeroBackgroundVideoProps {
-  /** Poster / fallback image (also used while the video loads) */
-  poster: string;
+  /** Optional poster / fallback image (also used while the video loads) */
+  poster?: string;
   /** Optional public path to the webm fallback source */
   webmSrc?: string;
   /** Public path to the mp4 source */
@@ -163,7 +163,7 @@ export const HeroBackgroundVideo: React.FC<HeroBackgroundVideoProps> = ({
           loop
           playsInline
           preload="auto"
-          poster={poster}
+          poster={poster || undefined}
           disablePictureInPicture
           aria-hidden="true"
           tabIndex={-1}

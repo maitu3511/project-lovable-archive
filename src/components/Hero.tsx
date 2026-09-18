@@ -17,8 +17,7 @@ import {
 } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { HeroBackgroundVideo } from "./HeroBackgroundVideo";
-import heroPoster from "../assets/heroes/home-hero-analytics-poster.jpg";
-import heroAnalyticsVideo from "../assets/home-hero-analytics-static.mp4.asset.json";
+import heroGrowthVideo from "../assets/home-hero-growth-video.mp4.asset.json";
 import { AGENCY_CONFIG } from "../data/agencyData";
 import { getWhatsAppUrl } from "../utils/whatsapp";
 
@@ -91,8 +90,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* 1. Digital Marketing Analytics Background Video */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <HeroBackgroundVideo
-          poster={heroPoster}
-          mp4Src={heroAnalyticsVideo.url}
+          mp4Src={heroGrowthVideo.url}
           className="blur-[2px] scale-[1.03]"
           opacity={0.8}
         />

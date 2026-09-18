@@ -172,8 +172,8 @@ export const HeroBackgroundVideo: React.FC<HeroBackgroundVideoProps> = ({
             if (document.visibilityState === "visible") setIsPlaying(false);
           }}
         >
-          <source src={mp4Src} type="video/mp4" />
           {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
+          <source src={mp4Src} type="video/mp4" />
         </video>
       ) : null}
     </div>

@@ -93,12 +93,12 @@ export const Hero: React.FC<HeroProps> = ({
         <HeroBackgroundVideo
           mp4Src={heroGrowthVideo.url}
           webmSrc={heroGrowthVideoWebm.url}
-          className="blur-[2px] scale-[1.03]"
-          opacity={0.8}
+          className="scale-[1.03]"
+          opacity={1}
         />
         {/* Soft white fade preserves pristine typography readability. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/70 via-[#FAF9F5]/35 to-[#FAF9F5]/82" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F5]/90 via-[#FAF9F5]/42 to-[#FAF9F5]/18" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/45 via-[#FAF9F5]/15 to-[#FAF9F5]/58" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F5]/65 via-[#FAF9F5]/22 to-transparent" />
       </div>
 
       {/* 2. Warm Gold Ambient Glows & Subtle Radial Accents */}

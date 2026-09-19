@@ -97,8 +97,10 @@ export const Hero: React.FC<HeroProps> = ({
           opacity={1}
         />
         {/* Soft white fade preserves pristine typography readability. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/45 via-[#FAF9F5]/15 to-[#FAF9F5]/58" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F5]/65 via-[#FAF9F5]/22 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/72 via-[#FAF9F5]/48 to-[#FAF9F5]/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F5]/78 via-[#FAF9F5]/50 to-[#FAF9F5]/55" />
+        {/* Extra spotlight wash directly behind the headline block for guaranteed text clarity */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_65%_at_50%_38%,rgba(250,249,245,0.9)_0%,rgba(250,249,245,0.55)_55%,rgba(250,249,245,0)_80%)]" />
       </div>
 
       {/* 2. Warm Gold Ambient Glows & Subtle Radial Accents */}
@@ -148,9 +150,9 @@ export const Hero: React.FC<HeroProps> = ({
           transition={{ duration: 0.6, delay: 0.1 }}
           className="space-y-4 max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] font-heading leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] font-heading leading-[1.15] [text-shadow:0_1px_2px_rgba(250,249,245,0.9),0_2px_20px_rgba(250,249,245,0.75)]">
             Transforming Brands Through High-Converting{" "}
-            <span className="relative inline-flex items-center text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] italic font-serif">
+            <span className="relative inline-flex items-center text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] italic font-serif drop-shadow-[0_2px_10px_rgba(250,249,245,0.6)]">
               <span>{displayText}</span>
               <span className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-[#D4AF37] ml-1 sm:ml-1.5 animate-pulse rounded-full shadow-[0_0_10px_rgba(212,175,55,0.9)]" />
             </span>
@@ -173,7 +175,7 @@ export const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-base sm:text-lg text-[#555555] max-w-3xl mx-auto font-normal leading-relaxed"
+          className="text-base sm:text-lg text-[#555555] max-w-3xl mx-auto font-normal leading-relaxed [text-shadow:0_1px_14px_rgba(250,249,245,0.85)]"
         >
           Rajkot&apos;s leading digital marketing and web development agency. We engineer custom,
           fast-loading web applications, dominate competitive Google search rankings, and deploy

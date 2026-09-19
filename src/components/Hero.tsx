@@ -18,6 +18,7 @@ import {
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { HeroBackgroundVideo } from "./HeroBackgroundVideo";
 import heroGrowthVideo from "../assets/home-hero-premium-web.mp4.asset.json";
+import heroGrowthVideoWebm from "../assets/home-hero-premium-web.webm.asset.json";
 import { AGENCY_CONFIG } from "../data/agencyData";
 import { getWhatsAppUrl } from "../utils/whatsapp";
 
@@ -91,6 +92,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <HeroBackgroundVideo
           mp4Src={heroGrowthVideo.url}
+          webmSrc={heroGrowthVideoWebm.url}
           className="scale-[1.03]"
           opacity={1}
         />

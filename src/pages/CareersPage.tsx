@@ -132,10 +132,10 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
               className="absolute left-[7.8%] top-[58.5%] hidden h-[13%] w-[9%] rounded-lg border border-[#D4AF37]/35 md:block"
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-[#FAF9F5]/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/35 via-white/15 to-[#FAF9F5]/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-white/15 to-white/35" />
           {/* Soft white wash behind the text block so heading & paragraph stay legible over the image */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,rgba(255,255,255,0.82)_0%,rgba(255,255,255,0.45)_55%,rgba(255,255,255,0)_78%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_78%_at_50%_42%,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.7)_50%,rgba(255,255,255,0.25)_75%,rgba(255,255,255,0)_92%)]" />
         </div>
 
         {/* Ambient Glow */}
@@ -158,10 +158,10 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight text-[#111111]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight text-[#111111] [text-shadow:0_1px_2px_rgba(255,255,255,0.9),0_2px_22px_rgba(255,255,255,0.8)]"
           >
             Build the Future of Digital Growth.{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] italic font-serif">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] italic font-serif drop-shadow-[0_2px_10px_rgba(255,255,255,0.7)]">
               Accelerate Your Career.
             </span>
           </motion.h1>
@@ -170,7 +170,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-lg text-[#555555] max-w-3xl mx-auto font-normal leading-relaxed"
+            className="text-base sm:text-lg text-[#555555] max-w-3xl mx-auto font-normal leading-relaxed [text-shadow:0_1px_14px_rgba(255,255,255,0.9)]"
           >
             We combine cutting-edge technology, creative storytelling, and data-backed media buying.
             Join a culture built on autonomy, continuous learning, and measurable commercial impact.

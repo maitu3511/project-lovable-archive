@@ -17,8 +17,8 @@ import {
 } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { HeroBackgroundVideo } from "./HeroBackgroundVideo";
-import heroGrowthVideo from "../assets/home-hero-growth-video-optimized.mp4.asset.json";
-import heroGrowthVideoWebm from "../assets/home-hero-growth-video.webm.asset.json";
+import heroGrowthVideo from "../assets/home-hero-premium-web.mp4.asset.json";
+import heroGrowthVideoWebm from "../assets/home-hero-premium-web.webm.asset.json";
 import { AGENCY_CONFIG } from "../data/agencyData";
 import { getWhatsAppUrl } from "../utils/whatsapp";
 

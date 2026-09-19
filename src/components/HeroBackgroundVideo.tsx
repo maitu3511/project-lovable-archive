@@ -30,20 +30,10 @@ export const HeroBackgroundVideo: React.FC<HeroBackgroundVideoProps> = ({
 }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [reduceMotion, setReduceMotion] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const syncPreference = () => setReduceMotion(mediaQuery.matches);
-    syncPreference();
-    mediaQuery.addEventListener("change", syncPreference);
-
-    return () => mediaQuery.removeEventListener("change", syncPreference);
-  }, []);
 
   useEffect(() => {
     const el = videoRef.current;
-    if (!el || reduceMotion) return;
+    if (!el) return;
 
     // Set autoplay-critical properties before every attempt for mobile browsers.
     el.muted = true;
@@ -132,7 +122,7 @@ export const HeroBackgroundVideo: React.FC<HeroBackgroundVideoProps> = ({
         observer.disconnect();
       }
     };
-  }, [mp4Src, webmSrc, reduceMotion]);
+  }, [mp4Src, webmSrc]);
 
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none">
@@ -150,32 +140,29 @@ export const HeroBackgroundVideo: React.FC<HeroBackgroundVideoProps> = ({
       )}
 
       {/* 2. Smooth Autoplaying Video Stream */}
-      {!reduceMotion ? (
-        <video
-          ref={videoRef}
-          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${className}`}
-          style={{
-            opacity: isPlaying ? opacity : 0,
-            willChange: "opacity",
-          }}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={poster || undefined}
-          disablePictureInPicture
-          aria-hidden="true"
-          tabIndex={-1}
-          onPlaying={() => setIsPlaying(true)}
-          onPause={() => {
-            if (document.visibilityState === "visible") setIsPlaying(false);
-          }}
-        >
-          {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
-          <source src={mp4Src} type="video/mp4" />
-        </video>
-      ) : null}
+      <video
+        ref={videoRef}
+        className={`absolute inset-0 w-full h-full object-cover object-center ${className}`}
+        style={{
+          opacity,
+          willChange: isPlaying ? "transform" : "auto",
+        }}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster={poster || undefined}
+        disablePictureInPicture
+        aria-hidden="true"
+        tabIndex={-1}
+        onLoadedData={() => setIsPlaying(true)}
+        onPlaying={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      >
+        {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
+        <source src={mp4Src} type="video/mp4" />
+      </video>
     </div>
   );
 };
